@@ -1,7 +1,10 @@
 name: Git Integration Demo
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+
 
 jobs:
   git-demo:
