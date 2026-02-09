@@ -1,14 +1,14 @@
-name: GitHub Actions Lab
+name: Git Integration Demo
 
 on:
   workflow_dispatch:
 
 jobs:
-  workspace-demo:
+  git-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Create a text file
-        run: echo "This file is inside the workspace" > demo.txt
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-      - name: Display file content
-        run: cat demo.txt
+      - name: List repository files
+        run: ls
