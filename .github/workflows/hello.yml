@@ -1,11 +1,14 @@
-name: Hello-Jenkins
+name: GitHub Actions Lab
 
 on:
   workflow_dispatch:
 
 jobs:
-  hello:
+  workspace-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello Message
-        run: echo "Hello Jenkins"
+      - name: Create a text file
+        run: echo "This file is inside the workspace" > demo.txt
+
+      - name: Display file content
+        run: cat demo.txt
